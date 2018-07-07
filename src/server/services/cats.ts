@@ -5,7 +5,7 @@ export interface ICatService {
     getCat(): Promise<Cat>;
 }
 
-export class CatService implements ICatService {
+export class CatsService implements ICatService {
     async getCat() {
         return {
             id: 1,
