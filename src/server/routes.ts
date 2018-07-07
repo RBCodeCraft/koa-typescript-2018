@@ -1,7 +1,7 @@
 
 import * as Koa from 'koa';
 import * as KoaRouter from 'koa-router';
-import { registerViews } from './views';
+import { registerViews } from './views/views';
 
 export function registerRoutes(app: Koa) {
 
