@@ -1,0 +1,22 @@
+{
+  "name": "rev",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build-server": "tslint -p . && tsc",
+    "watch-server": "nodemon --watch 'src/**/*' -e ts --exec 'ts-node' src/server/server.ts",
+    "start": "node dist/server/server.js"
+  },
+  "dependencies": {
+    "koa": "2.5.1",
+    "koa-router": "7.4.0"
+  },
+  "devDependencies": {
+    "@types/koa": "2.0.46",
+    "@types/koa-router": "7.0.30",
+    "nodemon": "1.17.3",
+    "ts-node": "6.0.1",
+    "tslint": "5.9.1",
+    "typescript": "2.8.3"
+  }
+}
