@@ -1,26 +1,22 @@
 
 import * as Koa from 'koa';
 import * as KoaRouter from 'koa-router';
+import { registerViews } from './views';
 
 export function registerRoutes(app: Koa) {
 
     const router = new KoaRouter();
 
-    router.get('/', async (ctx) => {
-        ctx.throw(401, 'Nah!');
-//         const welcomeText = 'Welcome to Koa!';
-//         ctx.body = `<!DOCTYPE html>
-// <html>
-// <head>
-//     <title>${welcomeText}</title>
-// </head>
-// <body>
-//     <h1>${welcomeText}</h1>
-// </body>
-// </html>`;
+    router.get('/test1', async (ctx) => {
+        ctx.body = `This is the first test route`;
     });
 
+    router.get('/test2', async (ctx) => {
+        ctx.body = `This is the second test route`;
+    });
+
+    registerViews(router);
+
     app.use(router.routes());
-    app.use(router.allowedMethods());
 
 }

@@ -3,8 +3,9 @@
         "module": "commonjs",
         "target": "es2017",
         "strict": true,
-        "strictPropertyInitialization": false,
         "rootDir": "./src",
         "outDir": "./dist",
+        "strictPropertyInitialization": false,
+        "jsx": "react"
     }
 }

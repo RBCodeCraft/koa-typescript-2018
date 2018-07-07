@@ -1,19 +1,25 @@
 {
-  "name": "rev",
+  "name": "koa-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server-side JavaScript with Koa and Typescript",
   "scripts": {
     "build-server": "tslint -p . && tsc",
-    "watch-server": "nodemon --watch 'src/**/*' -e ts --exec 'ts-node' src/server/server.ts",
+    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' src/server/server.ts",
     "start": "node dist/server/server.js"
   },
   "dependencies": {
     "koa": "2.5.1",
-    "koa-router": "7.4.0"
+    "koa-bodyparser": "4.2.1",
+    "koa-router": "7.4.0",
+    "react": "16.4.1",
+    "react-dom": "16.4.1"
   },
   "devDependencies": {
     "@types/koa": "2.0.46",
+    "@types/koa-bodyparser": "4.2.0",
     "@types/koa-router": "7.0.30",
+    "@types/react": "16.4.6",
+    "@types/react-dom": "16.0.6",
     "nodemon": "1.17.3",
     "ts-node": "6.0.1",
     "tslint": "5.9.1",
