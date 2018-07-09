@@ -2,6 +2,7 @@
   "name": "koa-typescript",
   "version": "1.0.0",
   "description": "Server-side JavaScript with Koa and Typescript",
+  "private": true,
   "scripts": {
     "build-server": "tslint -p . && tsc",
     "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' src/server/server.ts",
