@@ -7,7 +7,9 @@
     "rules": {
         "interface-name": false,
         "no-console": false,
+        "no-consecutive-blank-lines": false,
         "object-literal-sort-keys": false,
+        "one-line": false,
         "ordered-imports": false,
         "max-classes-per-file": false,
         "member-access": false,
