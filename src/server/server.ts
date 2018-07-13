@@ -6,11 +6,11 @@ const app = new Koa();
 
 // Log Requests
 app.use(async (ctx, next) => {
-    const start = new Date().getMilliseconds();
+    const start = Date.now();
 
     await next();
 
-    const responseTime = new Date().getMilliseconds() - start;
+    const responseTime = Date.now() - start;
     console.log(`${ctx.status} ${ctx.method} ${ctx.url} - ${responseTime}ms`);
 });
 
@@ -22,9 +22,20 @@ registerRoutes(app);
 
 // Return Hello World!
 app.use(async (ctx) => {
-    ctx.body = 'Hello World!';
+    ctx.body = 'Hello World!!!!!!';
 });
 
 app.listen(config.port);
 
 console.log(`Server is running at http://localhost:${config.port}/`);
+
+
+
+
+
+
+
+
+
+
+
