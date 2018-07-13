@@ -22,7 +22,7 @@ registerRoutes(app);
 
 // Return Hello World!
 app.use(async (ctx) => {
-    ctx.body = 'Hello World!!!!!!';
+    ctx.body = 'Hello World!';
 });
 
 app.listen(config.port);

@@ -29,7 +29,15 @@ export function registerCatVetRoutes(router: KoaRouter) {
     // CatVet POST Handler...
 
     router.post('/catvet', KoaBodyparser(), async (ctx) => {
-        const cat = new Cat(ctx.request.body);
+        const postData = ctx.request.body;
+        const cat = new Cat({
+            id: postData.id,
+            age: postData.age,
+            name: postData.name,
+            likesFish: postData.likesFish
+        });
+        cat.validate();
+
         const diagnosis = await ctx.services.vet.examineCat(cat);
         ctx.body = `We examined ${cat.name}. Diagnosis: ${diagnosis}`;
     });

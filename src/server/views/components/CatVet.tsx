@@ -2,11 +2,7 @@
 import * as React from 'react';
 import { Cat } from '../../models/cat';
 
-export interface ICatVetProps {
-    cat: Cat;
-}
-
-export function CatVet(props: ICatVetProps) {
+export function CatVet(props: ICatVetFormProps) {
     return (
         <div className="card" style={{ width: 400, margin: 'auto'}}>
             <div className="card-body">
@@ -24,7 +20,11 @@ export function CatVet(props: ICatVetProps) {
     );
 }
 
-export function CatVetForm(props: ICatVetProps) {
+export interface ICatVetFormProps {
+    cat: Cat;
+}
+
+export function CatVetForm(props: ICatVetFormProps) {
     return (
         <form action="/catvet" method="post">
 

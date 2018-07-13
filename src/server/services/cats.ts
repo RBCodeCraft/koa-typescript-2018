@@ -7,11 +7,11 @@ export interface ICatsService {
 
 export class CatsService implements ICatsService {
     async getCat() {
-        return {
+        return new Cat({
             id: 1,
             name: 'Felix',
             age: 2,
             likesFish: true,
-        };
+        });
     }
 }

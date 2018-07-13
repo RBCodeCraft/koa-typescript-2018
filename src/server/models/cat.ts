@@ -5,8 +5,13 @@ export class Cat {
     age: number;
     likesFish: boolean;
 
-    constructor(data: Cat) {
+    constructor(data: Partial<Cat>) {
         Object.assign(this, data);
+    }
+
+    validate() {
+        // yeah its probably fine!...
+        return true;
     }
 
 }
