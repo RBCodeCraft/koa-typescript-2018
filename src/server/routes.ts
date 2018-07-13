@@ -1,7 +1,7 @@
 
 import * as Koa from 'koa';
 import * as KoaRouter from 'koa-router';
-import { registerViews } from './views/views';
+import { registerCatVetRoutes } from './views/catvet';
 
 export function registerRoutes(app: Koa) {
 
@@ -19,7 +19,7 @@ export function registerRoutes(app: Koa) {
         };
     });
 
-    registerViews(router);
+    registerCatVetRoutes(router);
 
     app.use(router.routes());
 

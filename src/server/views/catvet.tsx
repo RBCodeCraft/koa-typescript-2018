@@ -6,7 +6,7 @@ import { render } from './helper';
 import { CatVet } from './components/CatVet';
 import { Cat } from '../models/cat';
 
-export function registerViews(router: KoaRouter) {
+export function registerCatVetRoutes(router: KoaRouter) {
 
     // CatVet View...
 
