@@ -14,14 +14,14 @@ app.use(async (ctx, next) => {
     console.log(`${ctx.status} ${ctx.method} ${ctx.url} - ${responseTime}ms`);
 });
 
-// Use routes and services
+// Use koa-router
 import { registerRoutes } from './routes';
-import { registerServices } from './services';
-registerServices(app);
 registerRoutes(app);
 
 // CatVet
+import { registerServices } from './services';
 import { registerCatVetRoutes } from './views/catvet';
+registerServices(app);
 registerCatVetRoutes(app);
 
 // Return Hello World!
