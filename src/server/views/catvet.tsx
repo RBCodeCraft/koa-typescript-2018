@@ -1,12 +1,15 @@
 
 import * as React from 'react';
+import * as Koa from 'koa';
 import * as KoaRouter from 'koa-router';
 import * as KoaBodyparser from 'koa-bodyparser';
 import { render } from './helper';
 import { CatVet } from './components/CatVet';
 import { Cat } from '../models/cat';
 
-export function registerCatVetRoutes(router: KoaRouter) {
+export function registerCatVetRoutes(app: Koa) {
+
+    const router = new KoaRouter();
 
     // CatVet View...
 
@@ -41,5 +44,7 @@ export function registerCatVetRoutes(router: KoaRouter) {
         const diagnosis = await ctx.services.vet.examineCat(cat);
         ctx.body = `We examined ${cat.name}. Diagnosis: ${diagnosis}`;
     });
+
+    app.use(router.routes());
 
 }

@@ -4,9 +4,9 @@
   "description": "Server-side JavaScript with Koa and Typescript",
   "private": true,
   "scripts": {
-    "build-server": "tslint -p . && tsc",
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' src/server/server.ts",
+    "build": "tslint -p . && tsc",
     "start": "node dist/server/server.js",
+    "start-watch": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' src/server/server.ts",
     "test": "jest",
     "test-watch": "jest --watch"
   },

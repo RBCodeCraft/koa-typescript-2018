@@ -3,7 +3,7 @@ import * as Koa from 'koa';
 import { Server } from 'http';
 import * as supertest from 'supertest';
 import * as superagent from 'superagent';
-import { registerRoutes } from '../../routes';
+import { registerCatVetRoutes } from '../catvet';
 
 import { ICatsService } from '../../services/cats';
 import { Cat } from '../../models/cat';
@@ -42,7 +42,7 @@ describe('CatVet XP Professional Edition', () => {
             };
             return next();
         });
-        registerRoutes(app);
+        registerCatVetRoutes(app);
         server = app.listen();
         request = supertest.agent(server);
     });

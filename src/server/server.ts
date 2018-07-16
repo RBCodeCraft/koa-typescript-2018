@@ -20,6 +20,10 @@ import { registerServices } from './services';
 registerServices(app);
 registerRoutes(app);
 
+// CatVet
+import { registerCatVetRoutes } from './views/catvet';
+registerCatVetRoutes(app);
+
 // Return Hello World!
 app.use(async (ctx) => {
     ctx.body = 'Hello World!';

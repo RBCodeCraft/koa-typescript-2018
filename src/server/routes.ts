@@ -1,7 +1,6 @@
 
 import * as Koa from 'koa';
 import * as KoaRouter from 'koa-router';
-import { registerCatVetRoutes } from './views/catvet';
 
 export function registerRoutes(app: Koa) {
 
@@ -18,8 +17,6 @@ export function registerRoutes(app: Koa) {
             age: 3
         };
     });
-
-    registerCatVetRoutes(router);
 
     app.use(router.routes());
 
